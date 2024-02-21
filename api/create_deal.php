@@ -8,8 +8,8 @@ function createDeal() {
     use Bitrix\Crm\Service;
     use Bitrix\Crm\Item;
 
-    require_once ($_SERVER["DOCUMENT_ROOT"] . "/test/classes/DB.php");
-    require_once ($_SERVER["DOCUMENT_ROOT"] . "/test/classes/Api.php");
+    require_once ($_SERVER["DOCUMENT_ROOT"] . "/expocar/classes/DB.php");
+    require_once ($_SERVER["DOCUMENT_ROOT"] . "/expocar/classes/Api.php");
     $DB = new DB();
 
     $factoryContact = Service\Container::getInstance()->getFactory(\CCrmOwnerType::Contact);

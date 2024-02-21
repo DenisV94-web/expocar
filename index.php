@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php
 
-require_once ($_SERVER["DOCUMENT_ROOT"] . "/test/classes/CurlHandler.php");
-$service = json_decode(file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/test/settings/service.json"));
+require_once ($_SERVER["DOCUMENT_ROOT"] . "/expocar/classes/CurlHandler.php");
+$service = json_decode(file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/expocar/settings/service.json"));
 
 $CurlHandler = new CurlHandler();
 $responce = $CurlHandler->exec("https://dev.expocar.ru/test", 'GET', array(), array(
@@ -82,7 +82,7 @@ $responce->phone = substr($responce->phone, 1);
 				$("#name, #phone, #email").prop("disabled", true)
 
 				$.ajax({
-					url: `${window.location.origin}/test/ajax/send_form.php`,
+					url: `${window.location.origin}/expocar/ajax/send_form.php`,
 					method: 'POST',
 					dataType: 'json',
 					data: {

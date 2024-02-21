@@ -8,7 +8,7 @@ class DB
     {
         try 
         {
-            $db_conn = json_decode(file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/test/settings/db_conn.json"));
+            $db_conn = json_decode(file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/expocar/settings/db_conn.json"));
             $this->db = new PDO($db_conn->dsn, $db_conn->username, $db_conn->password);
         } catch (PDOException $e) 
         {
